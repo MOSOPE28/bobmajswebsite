@@ -980,7 +980,7 @@ body {
 
   #jolly-about .image-container {
     order: 1;
-    height: 400px;
+    height: auto;
   }
 
   #jolly-about .content-container {
@@ -1012,7 +1012,7 @@ body {
   }
 
   #jolly-about .image-container {
-    height: 300px;
+    height: auto;
   }
 }
 
