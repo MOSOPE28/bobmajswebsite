@@ -4,24 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Featured Products</title>
-
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./css/product.css" />
   </head>
   <body>
-    <header id="header">
+    <section id="header">
       <a href="#"
         ><img src="images/family-removebg-preview.png" class="logo" alt=""
       /></a>
-
+      <div
+        class="hamburger"
+        onclick="document.getElementById('navbar').classList.toggle('show')"
+      >
+        <i class="fas fa-bars"></i>
+      </div>
       <ul id="navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a class="active" href="products.html">Products</a></li>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
         <li><a href="trustee.html">Trustee</a></li>
-        <li><a href="appointment.html">Appointments</a></li>
-        <li><a href="events.html">Event</a></li>
+        <li><a href="appointment.html">Appointment</a></li>
+        <li><a href="events.html">Events</a></li>
       </ul>
-    </header>
+    </section>
 
     <div class="marquee">
       <marquee
@@ -186,45 +194,45 @@
 
         if (filteredProducts.length === 0) {
           productGrid.innerHTML = `
-       <p style="grid-column: 1 / -1; text-align: center; color: #6b7280; font-style: italic;">
-         No products found matching your search.
-       </p>`;
+      <p style="grid-column: 1 / -1; text-align: center; color: #6b7280; font-style: italic;">
+        No products found matching your search.
+      </p>`;
         } else {
           filteredProducts.forEach((product) => {
             const card = document.createElement("div");
             card.className = "product-card";
             card.innerHTML = `
-         <div class="product-image-container">
-           <div
-             class="product-image"
-             style="background-image: url('${product.img}');"
-           ></div>
-         </div>
-         <div class="product-info">
-           <p class="product-brand">${product.brand}</p>
-           <h3 class="product-title">${product.title}</h3>
-           <div class="product-rating">${product.rating}</div>
-           <div class="product-price">${formatPrice(product.price)}</div>
-         </div>
-         <button class="buy-button">
-           <svg
-             xmlns="http://www.w3.org/2000/svg"
-             width="24"
-             height="24"
-             viewBox="0 0 24 24"
-             fill="none"
-             stroke="currentColor"
-             stroke-width="2"
-             stroke-linecap="round"
-             stroke-linejoin="round"
-             class="cart-icon"
-           >
-             <circle cx="8" cy="21" r="1"></circle>
-             <circle cx="19" cy="21" r="1"></circle>
-             <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
-           </svg>
-         </button>
-       `;
+        <div class="product-image-container">
+          <div
+            class="product-image"
+            style="background-image: url('${product.img}');"
+          ></div>
+        </div>
+        <div class="product-info">
+          <p class="product-brand">${product.brand}</p>
+          <h3 class="product-title">${product.title}</h3>
+          <div class="product-rating">${product.rating}</div>
+          <div class="product-price">${formatPrice(product.price)}</div>
+        </div>
+        <button class="buy-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="cart-icon"
+          >
+            <circle cx="8" cy="21" r="1"></circle>
+            <circle cx="19" cy="21" r="1"></circle>
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+          </svg>
+        </button>
+      `;
             productGrid.appendChild(card);
           });
         }
@@ -249,5 +257,6 @@
         renderProducts(filtered);
       });
     </script>
+    <script src="script.js"></script>
   </body>
 </html>

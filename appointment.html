@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Appointment - Fashion Forward</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./css/appointment.css" />
   </head>
@@ -12,13 +16,18 @@
       <a href="#"
         ><img src="images/family-removebg-preview.png" class="logo" alt=""
       /></a>
-
+      <div
+        class="hamburger"
+        onclick="document.getElementById('navbar').classList.toggle('show')"
+      >
+        <i class="fas fa-bars"></i>
+      </div>
       <ul id="navbar">
         <li><a class="active" href="index.html">Home</a></li>
         <li><a href="products.html">Products</a></li>
         <li><a href="trustee.html">Trustee</a></li>
-        <li><a href="contact.html">Appointments</a></li>
-        <li><a href="events.html">Event</a></li>
+        <li><a href="appointment.html">Appointment</a></li>
+        <li><a href="events.html">Events</a></li>
       </ul>
     </section>
     <div class="marquee">
@@ -254,5 +263,6 @@
         <p>&copy; 2025 Your Company. All rights reserved.</p>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
