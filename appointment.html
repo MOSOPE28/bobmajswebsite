@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Appointment - Fashion Forward</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/css/appointment.css" />
+  </head>
+  <body id="appointment">
+    <section id="header">
+      <a href="#"
+        ><img src="images/family-removebg-preview.png" class="logo" alt=""
+      /></a>
+
+      <ul id="navbar">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="trustee.html">Trustee</a></li>
+        <li><a href="contact.html">Appointments</a></li>
+        <li><a href="events.html">Event</a></li>
+      </ul>
+    </section>
+    <div class="marquee">
+      <marquee
+        >Welcome to BOBMAJS HOUSE - Discover Elegance ✿ Welcome to BOBMAJS HOUSE
+        - Discover Elegance ✿ Welcome to BOBMAJS HOUSE - Discover
+        Elegance</marquee
+      >
+    </div>
+    <div class="container">
+      <div class="header">
+        <h1>Book Appointment</h1>
+        <p>
+          Schedule a personalized consultation with our expert stylists and
+          fashion consultants
+        </p>
+      </div>
+
+      <div class="main-content">
+        <!-- Main Appointment Form -->
+        <div class="appointment-section">
+          <h2 class="section-title">Schedule Your Session</h2>
+          <p class="section-subtitle">
+            Fill out the form below and we'll match you with the perfect stylist
+            for your needs. Our team will contact you within 24 hours to confirm
+            your appointment.
+          </p>
+
+          <div class="success-message" id="successMessage">
+            🎉 Your appointment has been successfully scheduled! We'll contact
+            you soon to confirm all details and prepare for your styling
+            session.
+          </div>
+
+          <form class="appointment-form" id="appointmentForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="date">Preferred Date *</label>
+                <input type="date" id="date" name="date" required />
+              </div>
+              <div class="form-group">
+                <label for="time">Preferred Time *</label>
+                <select id="time" name="time" required>
+                  <option value="">Select Time</option>
+                  <option value="09:00">9:00 AM</option>
+                  <option value="09:30">9:30 AM</option>
+                  <option value="10:00">10:00 AM</option>
+                  <option value="10:30">10:30 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="11:30">11:30 AM</option>
+                  <option value="13:00">1:00 PM</option>
+                  <option value="13:30">1:30 PM</option>
+                  <option value="14:00">2:00 PM</option>
+                  <option value="14:30">2:30 PM</option>
+                  <option value="15:00">3:00 PM</option>
+                  <option value="15:30">3:30 PM</option>
+                  <option value="16:00">4:00 PM</option>
+                  <option value="16:30">4:30 PM</option>
+                  <option value="17:00">5:00 PM</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Select Your Service *</label>
+              <div class="service-options">
+                <div class="service-option" data-service="styling">
+                  <div class="service-icon">👗</div>
+                  <h4>Personal Styling</h4>
+                  <p>Complete wardrobe makeover and style consultation</p>
+                </div>
+                <div class="service-option" data-service="consultation">
+                  <div class="service-icon">💄</div>
+                  <h4>Style Consultation</h4>
+                  <p>Wardrobe analysis and styling advice</p>
+                </div>
+                <div class="service-option" data-service="fitting">
+                  <div class="service-icon">✂️</div>
+                  <h4>Personal Fitting</h4>
+                  <p>Custom tailoring and alterations</p>
+                </div>
+                <div class="service-option" data-service="shopping">
+                  <div class="service-icon">🛍️</div>
+                  <h4>Personal Shopping</h4>
+                  <p>Guided shopping experience with expert</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="budget">Budget Range</label>
+              <select id="budget" name="budget">
+                <option value="">Select Budget (Optional)</option>
+                <option value="under-500">Under &#x20A6;50000</option>
+                <option value="500-1000">
+                  &#x20A6;50000 - &#x20A6;100,000
+                </option>
+                <option value="1000-2000">
+                  &#x20A6;100,000 - &#x20A6;200,000
+                </option>
+                <option value="2000-5000">
+                  &#x20A6;200,000 - &#x20A6;500,000
+                </option>
+                <option value="over-5000">Over &#x20A6;500,000</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Tell Us About Your Style Goals</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Describe your style preferences, upcoming events, wardrobe challenges, or any specific requirements..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              Book My Appointment
+            </button>
+          </form>
+        </div>
+
+        <!-- Sidebar Information -->
+        <div class="sidebar">
+          <!-- Service Information -->
+          <div class="info-card">
+            <h3>What to Expect</h3>
+            <ul class="info-list">
+              <li>
+                <strong>Duration:</strong> 60-120 minutes depending on service
+              </li>
+              <li>
+                <strong>Location:</strong> Our private styling suite or your
+                home
+              </li>
+              <li>
+                <strong>Preparation:</strong> We'll send a style questionnaire
+                before your visit
+              </li>
+              <li>
+                <strong>Follow-up:</strong> Personalized style guide and
+                shopping list included
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="info-card">
+            <div class="contact-info">
+              <h4>Need Help?</h4>
+              <p>
+                <strong>Call us:</strong><br /><a href="tel:+1234567890"
+                  >+234 1234-567-8900</a
+                >
+              </p>
+              <p>
+                <strong>Email:</strong><br /><a
+                  href="mailto:appointments@fashionforward.com"
+                  >bodmajshouse@gmail.com</a
+                >
+              </p>
+              <p>
+                <strong>Hours:</strong><br />Monday - Saturday: 9 AM - 7 PM<br />Sunday:
+                11 AM - 5 PM
+              </p>
+            </div>
+          </div>
+
+          <!-- Testimonial -->
+          <div class="testimonial">
+            <p class="testimonial-text">
+              The styling session completely transformed my wardrobe and
+              confidence. The team understood my lifestyle and created looks
+              that are both professional and uniquely me.
+            </p>
+            <p class="testimonial-author">— Sarah M., Marketing Executive</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <p>
+            We are a company dedicated to delivering high-quality products and
+            services that meet your needs.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Trustee</a></li>
+            <li><a href="#">Appointment</a></li>
+            <li><a href="#">Events</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <p>Email: bobmajshouse@gmail.com</p>
+          <p>Phone: +234 123 456 6701</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Your Company. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
